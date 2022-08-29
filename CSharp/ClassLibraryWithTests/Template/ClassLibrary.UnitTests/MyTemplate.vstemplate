@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Class Library Tests</Name>
+    <Description>Class library tests</Description>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ClassLibrary.UnitTests</DefaultName>
+    <Hidden>true</Hidden>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ClassLibrary</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$ext_safeprojectname$.UnitTests.csproj" File="ClassLibrary.UnitTests.csproj" ReplaceParameters="true">
+      <Folder Name="DependencyInjection" TargetFolderName="DependencyInjection">
+        <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$ServicesRegistrationTests.cs">ClassLibraryServicesRegistrationTests.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="PersonServiceTests.cs">PersonServiceTests.cs</ProjectItem>
+      </Folder>
+      <Folder Name="TestUtilities" TargetFolderName="TestUtilities">
+        <ProjectItem ReplaceParameters="true" TargetFileName="LoggerSpy.cs">LoggerSpy.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="GlobalUsings.cs">GlobalUsings.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

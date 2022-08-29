@@ -1,0 +1,30 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Class Library Contracts</Name>
+    <Description>Class library contracts</Description>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ClassLibrary.Contracts</DefaultName>
+    <Hidden>true</Hidden>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ClassLibrary</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$ext_safeprojectname$.Contracts.csproj" File="ClassLibrary.Contracts.csproj" ReplaceParameters="true">
+      <Folder Name="Model" TargetFolderName="Model">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Person.cs">Person.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IPersonService.cs">IPersonService.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="GlobalUsings.cs">GlobalUsings.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

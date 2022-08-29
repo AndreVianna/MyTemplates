@@ -1,0 +1,26 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Class Library with Tests</Name>
+    <Description>Library implementation with contracts project and unit test project with 100% code coverage.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>10</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ClassLibrary</DefaultName>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Contracts" CopyParameters="true" >
+            ClassLibrary.Contracts\MyTemplate.vstemplate
+        </ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$" CopyParameters="true">
+            ClassLibrary\MyTemplate.vstemplate
+        </ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.UnitTests" CopyParameters="true">
+            ClassLibrary.UnitTests\MyTemplate.vstemplate
+        </ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,30 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Class Library</Name>
+    <Description>Class library implementation</Description>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ClassLibrary</DefaultName>
+    <Hidden>true</Hidden>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ClassLibrary</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$ext_safeprojectname$.csproj" File="ClassLibrary.csproj" ReplaceParameters="true">
+      <Folder Name="DependencyInjection" TargetFolderName="DependencyInjection">
+        <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$ServicesRegistration.cs">ClassLibraryServicesRegistration.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="PersonService.cs">PersonService.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="GlobalUsings.cs">GlobalUsings.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
